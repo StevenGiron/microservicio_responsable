@@ -1,13 +1,13 @@
 package co.com.responsable.mongo.empleado;
 
 import co.com.responsable.model.empresa.Empresa;
+import co.com.responsable.mongo.empresa.EmpresaData;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.DocumentReference;
 
 import java.math.BigDecimal;
 
@@ -23,10 +23,9 @@ public class EmpleadoData {
     protected String correoPersonal;
     protected String tipoDeDocumento;
     protected String numeroDeDocumento;
-
-    protected String empresa;
-    private String tipoDeContrato;
-    private String cargo;
-    private String correoEmpresarial;
-    private BigDecimal salario;
+    protected EmpresaData empresa;
+    protected String tipoDeContrato;
+    protected String cargo;
+    protected String correoEmpresarial;
+    protected BigDecimal salario;
 }

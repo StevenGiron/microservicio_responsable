@@ -20,8 +20,8 @@ public class Empleado {
     protected String tipoDeDocumento;
     protected String numeroDeDocumento;
     protected Empresa empresa;
-    private String tipoDeContrato;
-    private String cargo;
-    private String correoEmpresarial;
-    private BigDecimal salario;
+    protected String tipoDeContrato;
+    protected String cargo;
+    protected String correoEmpresarial;
+    protected BigDecimal salario;
 }

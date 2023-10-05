@@ -1,17 +1,16 @@
 package co.com.responsable.mongo.empleado;
 
 import co.com.responsable.model.empleado.Empleado;
-import co.com.responsable.mongo.empleado.MongoDBRepository;
 import co.com.responsable.mongo.helper.AdapterOperations;
 import org.reactivecommons.utils.ObjectMapper;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class MongoRepositoryAdapter extends AdapterOperations<Empleado/* change for domain model */, EmpleadoData/* change for adapter model */, String, MongoDBRepository>
+public class MongoRepositoryEmpleadoAdapter extends AdapterOperations<Empleado/* change for domain model */, EmpleadoData/* change for adapter model */, String, MongoDBRepositoryEmpleado>
 // implements ModelRepository from domain
 {
 
-    public MongoRepositoryAdapter(MongoDBRepository repository, ObjectMapper mapper) {
+    public MongoRepositoryEmpleadoAdapter(MongoDBRepositoryEmpleado repository, ObjectMapper mapper) {
         /**
          *  Could be use mapper.mapBuilder if your domain model implement builder pattern
          *  super(repository, mapper, d -> mapper.mapBuilder(d,ObjectModel.ObjectModelBuilder.class).build());
