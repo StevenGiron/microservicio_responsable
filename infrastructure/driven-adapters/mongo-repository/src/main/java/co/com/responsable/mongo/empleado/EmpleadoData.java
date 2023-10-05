@@ -1,13 +1,11 @@
 package co.com.responsable.mongo.empleado;
 
-import co.com.responsable.model.empresa.Empresa;
 import co.com.responsable.mongo.empresa.EmpresaData;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.DocumentReference;
 
 import java.math.BigDecimal;
 
