@@ -27,6 +27,11 @@ public class EmpleadoRepositoryImpl implements EmpleadoRepository {
     }
 
     @Override
+    public Mono<Empleado> obtenerEmpleadoPorId(String id) {
+        return dao.findById(id);
+    }
+
+    @Override
     public Mono<Empleado> guardarEmpleado(Empleado empleado) {
         return dao.save(empleado);
     }

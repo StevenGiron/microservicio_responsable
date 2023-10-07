@@ -10,6 +10,8 @@ public interface EmpleadoRepository {
 
     public Mono<Empleado> obtenerEmpleadoPorCorreo(String correo);
 
+    public Mono<Empleado> obtenerEmpleadoPorId(String id);
+
     public Mono<Empleado> guardarEmpleado(Empleado empleado);
 
     public Mono<Empleado> actualizarEmpleado(String id, Empleado empleado);

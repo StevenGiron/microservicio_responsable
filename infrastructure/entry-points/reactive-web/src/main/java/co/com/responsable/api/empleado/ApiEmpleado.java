@@ -27,6 +27,11 @@ public class ApiEmpleado {
         return empleadoUseCase.obtenerEmpleadoPorCorreo(correo);
     }
 
+    @GetMapping(value = "/obtenerEmpleadoPorId/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Mono<Empleado> obtenerEmpleadoPorId(@PathVariable("id") String id) {
+        return empleadoUseCase.obtenerEmpleadoPorId(id);
+    }
+
     @PostMapping(value = "/guardarEmpleado/{idEmpresa}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public Mono<Empleado> guardarEmpleado(@RequestBody EmpleadoDto data, @PathVariable("idEmpresa") String idEmpresa) {
         return empresaUseCase.obtenerEmpresaPorid(idEmpresa).flatMap(empresa -> {

@@ -18,6 +18,10 @@ public class EmpleadoUseCase {
         return empleadoRepository.obtenerEmpleadoPorCorreo(correo);
     }
 
+    public Mono<Empleado> obtenerEmpleadoPorId(String id) {
+        return empleadoRepository.obtenerEmpleadoPorId(id);
+    }
+
     public Mono<Empleado> guardarEmpleado(Empleado empleado) {
         return empleadoRepository.guardarEmpleado(empleado);
     }
